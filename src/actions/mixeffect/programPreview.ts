@@ -30,6 +30,9 @@ export interface AtemProgramPreviewActions {
 	[ActionId.Auto]: {
 		mixeffect: number
 	}
+	[ActionId.AutoVariables]: {
+		mixeffect: number
+	}
 	[ActionId.TBar]: {
 		mixeffect: number
 		position: string
@@ -162,7 +165,21 @@ export function createProgramPreviewActions(
 				await atem?.autoTransition(options.getPlainNumber('mixeffect'))
 			},
 		},
-
+		[ActionId.AutoVariables]: {
+			name: 'ME: Perform AUTO transition from variables',
+			options: {
+				mixeffect: {
+					type: 'textinput',
+					id: 'mixeffect',
+					label: 'M/E',
+					default: '1',
+					useVariables: true,
+				},
+			},
+			callback: async ({ options }) => {
+				await atem?.autoTransition(options.getPlainNumber('mixeffect'))
+			},
+		},
 		[ActionId.TBar]: {
 			name: 'ME: Set TBar position',
 			options: {

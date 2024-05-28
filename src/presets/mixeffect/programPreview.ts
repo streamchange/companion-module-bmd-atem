@@ -20,11 +20,15 @@ export function createProgramPreviewPresets(
 			name: `Preview (M/E ${me + 1})`,
 			presets: {},
 		}
+		const comboCategory: MyPresetDefinitionCategory<ActionTypes, FeedbackTypes> = {
+			name: `Combo (M/E ${me + 1})`,
+			presets: {},
+		}
 		const programCategory: MyPresetDefinitionCategory<ActionTypes, FeedbackTypes> = {
 			name: `Program (M/E ${me + 1})`,
 			presets: {},
 		}
-		result.push(previewCategory, programCategory)
+		result.push(previewCategory, programCategory, comboCategory)
 
 		for (const src of meSources) {
 			previewCategory.presets[`preview_me_${me}_${src.id}`] = {
@@ -46,6 +50,55 @@ export function createProgramPreviewPresets(
 						style: {
 							bgcolor: combineRgb(0, 255, 0),
 							color: combineRgb(255, 255, 255),
+						},
+					},
+				],
+				steps: [
+					{
+						down: [
+							{
+								actionId: ActionId.Preview,
+								options: {
+									mixeffect: me,
+									input: src.id,
+								},
+							},
+						],
+						up: [],
+					},
+				],
+			}
+
+			comboCategory.presets[`preview_me_${me}_${src.id}`] = {
+				name: `Combo button for ${src.shortName}`,
+				type: 'button',
+				style: {
+					text: `$(atem:${pstText}${src.id})`,
+					size: pstSize,
+					color: combineRgb(255, 255, 255),
+					bgcolor: combineRgb(0, 0, 0),
+				},
+				feedbacks: [
+					{
+						feedbackId: FeedbackId.PreviewBG,
+						options: {
+							input: src.id,
+							mixeffect: me,
+						},
+						style: {
+							bgcolor: combineRgb(0, 255, 0),
+							color: combineRgb(255, 255, 255),
+						},
+					},
+					{
+						feedbackId: FeedbackId.ProgramBG,
+						style: {
+							bgcolor: combineRgb(255, 0, 0),
+							color: combineRgb(255, 255, 255),
+						},
+						options: {
+							input: src.id,
+							mixeffect: me,
 						},
 					},
 				],

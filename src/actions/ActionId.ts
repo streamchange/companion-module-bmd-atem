@@ -5,6 +5,7 @@ export enum ActionId {
 	PreviewVariables = 'previewVariables',
 	Cut = 'cut',
 	Auto = 'auto',
+	AutoVariables = 'autoVariables',
 	TBar = 'tBar',
 	Aux = 'aux',
 	AuxVariables = 'auxVariables',
