@@ -1,0 +1,1 @@
+{"version":3,"file":"miniproiso.js","sourceRoot":"","sources":["../../src/models/miniproiso.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,KAAK,EAAE,MAAM,iBAAiB,CAAA;AAEvC,OAAO,EAAE,gBAAgB,EAAE,MAAM,cAAc,CAAA;AAE/C,MAAM,CAAC,MAAM,mBAAmB,GAAc;IAC7C,GAAG,gBAAgB;IACnB,EAAE,EAAE,KAAK,CAAC,KAAK,CAAC,UAAU;IAC1B,KAAK,EAAE,cAAc;IACrB,SAAS,EAAE,IAAI;CACf,CAAA"}

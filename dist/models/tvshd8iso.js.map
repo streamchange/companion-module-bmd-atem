@@ -1,0 +1,1 @@
+{"version":3,"file":"tvshd8iso.js","sourceRoot":"","sources":["../../src/models/tvshd8iso.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,KAAK,EAAE,MAAM,iBAAiB,CAAA;AAEvC,OAAO,EAAE,eAAe,EAAE,MAAM,aAAa,CAAA;AAE7C,MAAM,CAAC,MAAM,kBAAkB,GAAc;IAC5C,GAAG,eAAe;IAClB,EAAE,EAAE,KAAK,CAAC,KAAK,CAAC,sBAAsB;IACtC,KAAK,EAAE,2BAA2B;IAClC,SAAS,EAAE,IAAI;CACf,CAAA"}

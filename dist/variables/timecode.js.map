@@ -1,0 +1,1 @@
+{"version":3,"file":"timecode.js","sourceRoot":"","sources":["../../src/variables/timecode.ts"],"names":[],"mappings":"AAIA,OAAO,EAAE,qBAAqB,EAAE,MAAM,WAAW,CAAA;AAEjD,MAAM,UAAU,uBAAuB,CACtC,QAAqC,EACrC,MAAiB,EACjB,MAA+B;IAE/B,MAAM,CAAC,UAAU,CAAC,GAAG,qBAAqB,CAAC,QAAQ,CAAC,eAAe,CAAC,CAAC,GAAG,CAAA;IACxE,8EAA8E;AAC/E,CAAC"}
