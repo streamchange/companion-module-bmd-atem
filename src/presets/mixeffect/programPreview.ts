@@ -20,15 +20,15 @@ export function createProgramPreviewPresets(
 			name: `Preview (M/E ${me + 1})`,
 			presets: {},
 		}
-		const comboCategory: MyPresetDefinitionCategory<ActionTypes, FeedbackTypes> = {
-			name: `Combo (M/E ${me + 1})`,
-			presets: {},
-		}
 		const programCategory: MyPresetDefinitionCategory<ActionTypes, FeedbackTypes> = {
 			name: `Program (M/E ${me + 1})`,
 			presets: {},
 		}
-		result.push(previewCategory, programCategory, comboCategory)
+		const comboCategory: MyPresetDefinitionCategory<ActionTypes, FeedbackTypes> = {
+			name: `Combo (M/E ${me + 1})`,
+			presets: {},
+		}
+		result.push(programCategory, previewCategory, comboCategory)
 
 		for (const src of meSources) {
 			previewCategory.presets[`preview_me_${me}_${src.id}`] = {
@@ -69,7 +69,7 @@ export function createProgramPreviewPresets(
 				],
 			}
 
-			comboCategory.presets[`preview_me_${me}_${src.id}`] = {
+			comboCategory.presets[`combo_me_${me}_${src.id}`] = {
 				name: `Combo button for ${src.shortName}`,
 				type: 'button',
 				style: {
@@ -157,6 +157,6 @@ export function createProgramPreviewPresets(
 			}
 		}
 	}
-
+	console.log(result)
 	return result
 }

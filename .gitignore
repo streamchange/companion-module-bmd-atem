@@ -13,7 +13,7 @@
 .pnp.*
 /node_modules
 
-#dist/
+dist/
 *.log
 state.json
 pkg

@@ -8,15 +8,15 @@ export function createProgramPreviewPresets(model, pstSize, pstText, meSources) 
             name: `Preview (M/E ${me + 1})`,
             presets: {},
         };
-        const comboCategory = {
-            name: `Combo (M/E ${me + 1})`,
-            presets: {},
-        };
         const programCategory = {
             name: `Program (M/E ${me + 1})`,
             presets: {},
         };
-        result.push(previewCategory, programCategory, comboCategory);
+        const comboCategory = {
+            name: `Combo (M/E ${me + 1})`,
+            presets: {},
+        };
+        result.push(programCategory, previewCategory, comboCategory);
         for (const src of meSources) {
             previewCategory.presets[`preview_me_${me}_${src.id}`] = {
                 name: `Preview button for ${src.shortName}`,
@@ -55,7 +55,7 @@ export function createProgramPreviewPresets(model, pstSize, pstText, meSources) 
                     },
                 ],
             };
-            comboCategory.presets[`preview_me_${me}_${src.id}`] = {
+            comboCategory.presets[`combo_me_${me}_${src.id}`] = {
                 name: `Combo button for ${src.shortName}`,
                 type: 'button',
                 style: {
@@ -142,6 +142,7 @@ export function createProgramPreviewPresets(model, pstSize, pstText, meSources) 
             };
         }
     }
+    console.log(result);
     return result;
 }
 //# sourceMappingURL=programPreview.js.map
